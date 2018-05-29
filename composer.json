@@ -1,0 +1,7 @@
+{
+    "name": "matks/deployer-workshop",
+    "type": "project",
+    "require": {
+        "deployer/deployer": "^4.3"
+    }
+}

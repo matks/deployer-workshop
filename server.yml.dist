@@ -1,0 +1,11 @@
+tutorial:
+    host: 'my-server'
+    port: 2200
+    user: 'my-user'
+    identity_file:
+        public_key:  '~/.ssh/id_rsa.pub'
+        private_key: '~/.ssh/id_rsa'
+        password: ~
+    stage: dev
+    forward_agent: true
+    deploy_path: 'my-deploy-path'
