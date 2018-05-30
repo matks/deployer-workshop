@@ -31,9 +31,6 @@ task('deploy-one', [
     'deploy:prepare',
     'deploy:release',
     'deploy:update_code',
-    'deploy:shared',
-    'deploy:writable',
-    'deploy:clear_paths',
     'deploy:symlink',
     'cleanup',
     'success'
@@ -44,10 +41,7 @@ task('deploy-two', [
     'deploy:prepare',
     'deploy:release',
     'deploy:update_code',
-    'deploy:shared',
-    'deploy:writable',
     'custom:vendors_in_php2',
-    'deploy:clear_paths',
     'deploy:symlink',
     'cleanup',
     'success'
