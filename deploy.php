@@ -13,42 +13,16 @@ set('shared_dirs', []);
 set('writable_dirs', []);
 
 // Servers
-
 serverList('server.yml');
 
-
 // Tasks
-task('test', function () {
-    writeln('Hello world');
-});
 
-task('custom:vendors_in_php2', function () {
-    run('cd {{release_path}}/apps/php2 && {{env_vars}} {{bin/composer}} {{composer_options}}');
-});
-
-desc('Deploy index.html');
-task('deploy-one', [
+desc('Deploy your project');
+task('deploy', [
     'deploy:prepare',
     'deploy:release',
-    'deploy:update_code',
-    'deploy:shared',
-    'deploy:writable',
-    'deploy:clear_paths',
+    /*'deploy:update_code',
     'deploy:symlink',
     'cleanup',
-    'success'
-]);
-
-desc('Deploy app php2');
-task('deploy-two', [
-    'deploy:prepare',
-    'deploy:release',
-    'deploy:update_code',
-    'deploy:shared',
-    'deploy:writable',
-    'custom:vendors_in_php2',
-    'deploy:clear_paths',
-    'deploy:symlink',
-    'cleanup',
-    'success'
+    'success'*/
 ]);
